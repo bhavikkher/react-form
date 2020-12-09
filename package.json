@@ -1,13 +1,15 @@
 {
-  "name": "create-react-app",
+  "name": "react-form",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
+    "start": "react-scripts start",
     "dev": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
