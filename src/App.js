@@ -41,7 +41,7 @@ class App extends React.Component {
   validForm = (formData) => {
     const { email, password, formErrorMessages } = formData;
     let isFormContainError = false;
-    const regex=/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    const regex=/([\w-\\.]+)@((\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([\w-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     if (email === '') {
       isFormContainError = true;
       formErrorMessages.emailError = "Email is required."
@@ -90,7 +90,7 @@ class App extends React.Component {
                 <div className="form-group" >
                   <label htmlFor="exampleInputEmail1">Email address</label>
                   <input type="email" className="form-control" name="email" id="exampleInputEmail1" placeholder="Email address"
-                    value={this.state.email.trim()} onChange={(e) => (this.handleFormChangeInputValues(e))}
+                    value={this.state.email} onChange={(e) => (this.handleFormChangeInputValues(e))}
                   />
                   {
                     formErrorMessages.emailError && <small className="form-text text-danger">{formErrorMessages.emailError}</small>
